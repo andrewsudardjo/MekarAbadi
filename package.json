@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Your app description",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "dependencies": {
