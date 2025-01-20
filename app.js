@@ -2,7 +2,6 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import indexRouter from './app/routes/public/index.js';
-import productRouter from './app/routes/public/product.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -10,6 +9,7 @@ const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'style')));
 
 // Set up the view engine
 app.set('views', path.join(__dirname, 'app', 'views'));
@@ -33,7 +33,7 @@ app.use((err, req, res, next) => {
 
 // Use index router for the root path
 app.use('/', indexRouter);
-app.use('/products', productRouter);
+
 
 // Create and start the server
 export const createServer = () => {
