@@ -136,9 +136,11 @@ footer {
 
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding: 10px;
     gap: 10px;
+
 }
 
 .social-icons a {
@@ -215,5 +217,10 @@ footer {
 
     .social-icons {
         justify-content: center; /* Center icons on small screens */
+        flex-direction:row;
+     
+    }   
+    .social-icons h4{
+        margin-bottom: 10px;
     }
 }
