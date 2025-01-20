@@ -15,9 +15,17 @@ header {
     background-color: #343a40;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
 
 body {
     padding-top: 150px;
+    width: 100vw; /* Use full viewport width */
+    overflow-x: hidden;
 }
 
 .carousel-inner {
@@ -37,7 +45,7 @@ body {
 
 .mt-3 {
     font-size: large;
-    line-height: 1;
+    line-height: 1.5;
     margin: 5px 0;
 }
 
@@ -50,6 +58,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .text-center2 {
@@ -69,15 +78,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 0;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .body2 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -85,19 +94,18 @@ body {
     font-size: 45px;
 }
 
-.text-center1 {
-    width: auto;
-    margin-right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.text-center1 
+{ flex: 1; /* Allow the text to grow and shrink with the container */ 
+    max-width: 600px; /* Limit the maximum width */ 
+    margin: 0 20px; /* Add some margin to the sides */ 
     text-align: left;
 }
 
 .text-center2 {
+    flex: 1;
     text-align: left;
-    width: auto;
-    margin-left: 60px;
+    max-width: 600px;
+    margin:0 20px;
 }
 
 .tanahabang {
@@ -110,25 +118,14 @@ body {
 
 .indoFactory {
     width: 600px; /* Set specific width */
-    height: 300px; /* Set specific height */
+    height: 350px; /* Set specific height */
     object-fit: cover; /* Ensure the image maintains its aspect ratio */
-    margin-left: 80px;
+    margin: 0;
     border: 5px solid rgba(0, 128, 128, 0.5); /* Teal border with 50% opacity */
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .tanahabang,
-    .indoFactory {
-        width: 100%; /* Make images full width on small screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-
 footer {
     height: auto;
-    padding: 5px 10px;
     background-color: #333;
     color: whitesmoke;
 }
@@ -146,10 +143,11 @@ footer {
 
 .social-icons a {
     display: flex;
-    align-items: center;
+    align-items: right;
     text-decoration: none;
     color: white;
     margin: 0 5px;
+    
 }
 
 .social-icons img {
@@ -184,23 +182,35 @@ footer {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    
+    .tanahabang, .indoFactory { width: 100%; /* Make images full width on small screens */ height: auto; /* Maintain aspect ratio */ }
 
     .text-center1,
     .text-center2 {
         margin: 0;
         width: 100%;
-        text-align: center; /* Center align text on small screens */
+        
     }
+
+    .hide-on-mobile { 
+        display: none; /* Hide the text on screens smaller than 768px */
+     }
 
     .fw-bold {
         font-size: 30px; /* Adjust font size for small screens */
     }
+   
+    .carousel-item .container .row .col-md-6 { display: block; /* Ensure columns are displayed */ } .carousel-item .container .row .col-md-6 + .col-md-6 { display: none; /* Hide the second image column on small screens */ }
+
+
 
     .body1,
     .body2 {
         flex-direction: column;
-        gap: 20px;
+        max-width: none;
+        text-align: center;
+    }
+    .mt-3{
+        text-align: center;
     }
 
     .social-icons {
