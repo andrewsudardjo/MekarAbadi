@@ -1,166 +1,209 @@
+/* Base styles */
 header {
     background: url('/background-MA.jpg') no-repeat center center;
-    background-size: cover; /* Ensures the image covers the entire header */
-    color: white; /* Keeps text readable on the image */
+    background-size: cover;
+    color: white;
     height: 100px;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Space out the content horizontally */    
-    position: fixed; /* Fix the header at the top */
-    top: 0; /* Position it at the very top of the page */
-    left: 0; /* Align it to the left edge */
-    width: 100%; /* Ensure the header spans the full width of the viewport */
-    z-index: 1000; /* Place it above other elements */
-    background-color: #343a40; /* Ensure the background covers content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better visibility */
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #343a40;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 body {
-    padding-top: 150px; /* Adjust this to match the header's height */
+    padding-top: 150px;
 }
 
-
-.carousel-inner{
+.carousel-inner {
     height: 600px;
-    
 }
-.carousel-item img{
-    width:300px;
+
+.carousel-item img {
+    width: 100%; /* Make images responsive */
+    height: auto;
 }
 
 .hero-text {
-    background: rgba(0, 0, 0, 0.6); /* Optional: Adding a semi-transparent background for better text visibility */
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 10px;
 }
 
-.mt-3{
+.mt-3 {
     font-size: large;
-    line-height: 1; /* Adjust the line height to reduce space between lines */ 
-    margin: 5px 0
+    line-height: 1;
+    margin: 5px 0;
 }
-.mt-4{
+
+.mt-4 {
     font-size: large;
 }
-.container1
-{ 
-    display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
-   
-} 
 
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-.text-center2{
+.text-center2 {
     width: 45%;
     float: right;
 }
-.post { 
+
+.post {
     margin: 40px;
-     
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
 .body1 {
     display: flex;
-    justify-content: center; /* Center the container horizontally */
-    align-items: center; /* Align items vertically */
-    flex-wrap: nowrap;
-    gap: 0; /* Remove any extra space between the elements */
-}
-.body2{
-    display:flex;
     justify-content: center;
-    align-items: flex-start; /* Align items at the start */ 
-    flex-wrap: nowrap; 
-    gap: 10px; /* Adjust space between elements if needed */
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
 }
 
+.body2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
 
-.fw-bold{
-font-size: 45px;
+.fw-bold {
+    font-size: 45px;
 }
 
 .text-center1 {
-width: auto; /* Adjust the width as needed */
-margin-right: 50px; /* Reduce the space between text and image */
-display: flex;
-flex-direction: column; /* Ensure text flows vertically */
-justify-content: center; /* Center the text vertically */
-text-align: left;
+    width: auto;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
+
 .text-center2 {
-text-align: left; /* Align text to the left */ 
-width: auto; /* Adjust the width as needed */
-margin-left: 60px;
+    text-align: left;
+    width: auto;
+    margin-left: 60px;
 }
 
 .tanahabang {
-    width: 600px; /* Adjust the size as needed */
-    height: 350px;
+    width: 600px; /* Set specific width */
+    height: 350px; /* Set specific height */
     object-fit: cover; /* Ensure the image maintains its aspect ratio */
     margin: 0; /* Remove any extra margin */
     border: 5px solid rgba(0, 128, 128, 0.5); /* Teal border with 50% opacity */
-  }
-  
-  
-.indoFactory{
-    width:600px;
-    height: 300px;
-    object-fit: cover;
+}
+
+.indoFactory {
+    width: 600px; /* Set specific width */
+    height: 300px; /* Set specific height */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
     margin-left: 80px;
     border: 5px solid rgba(0, 128, 128, 0.5); /* Teal border with 50% opacity */
+}
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .tanahabang,
+    .indoFactory {
+        width: 100%; /* Make images full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
+
+
 footer {
-height: auto; /* Adjust to desired height */ 
-padding: 5px 10px; /* Reduce padding */
-background-color: #333; /* Example background color */
-color: whitesmoke;
+    height: auto;
+    padding: 5px 10px;
+    background-color: #333;
+    color: whitesmoke;
 }
-.footer-content { 
-flex: 1;
+
+.footer-content {
+    flex: 1;
 }
 
 .social-icons {
-display: flex;
-justify-content: right; /* Center the icons horizontally */
-align-items: right; /* Center the icons vertically */
-gap: 10px; /* Add space between icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .social-icons a {
-display: flex;
-align-items: center;
-text-decoration: none;
-color: white;
-margin: 0 5px; /* Adjust margin as needed */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
 }
 
 .social-icons img {
-width: 30px; /* Adjust the size of the icons */
-height: auto;
+    width: 30px;
+    height: auto;
 }
-#contact { margin-top: 10px; /* Reduce the margin top */ }
 
+#contact {
+    margin-top: 10px;
+}
 
 /* Animation for sliding up */
 @keyframes slide-up {
-from {
-opacity: 0;
-transform: translateY(20px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .slide-up {
-opacity: 0; /* Ensure elements are hidden initially */
-animation: slide-up 0.5s ease-out forwards; /* Apply the animation */
+    opacity: 0;
+    animation: slide-up 0.5s ease-out forwards;
 }
 
 .hidden {
-visibility: hidden; /* Ensure elements are hidden initially */
+    visibility: hidden;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    
+
+    .text-center1,
+    .text-center2 {
+        margin: 0;
+        width: 100%;
+        text-align: center; /* Center align text on small screens */
+    }
+
+    .fw-bold {
+        font-size: 30px; /* Adjust font size for small screens */
+    }
+
+    .body1,
+    .body2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center icons on small screens */
+    }
+}
