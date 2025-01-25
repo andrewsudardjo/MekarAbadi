@@ -109,8 +109,8 @@ body {
 }
 
 .tanahabang {
-    width: 600px; /* Set specific width */
-    height: 350px; /* Set specific height */
+    width: auto; /* Set specific width */
+    height: 400px; /* Set specific height */
     object-fit: cover; /* Ensure the image maintains its aspect ratio */
     margin: 0; /* Remove any extra margin */
     border: 5px solid rgba(0, 128, 128, 0.5); /* Teal border with 50% opacity */
@@ -184,21 +184,34 @@ footer {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .tanahabang, .indoFactory { width: 100%; /* Make images full width on small screens */ height: auto; /* Maintain aspect ratio */ }
+    .tanahabang{
+        width: auto;
+        height: 500px;
+    }
+     .indoFactory { 
+        width: 100%; /* Make images full width on small screens */ 
+        height: auto; /* Maintain aspect ratio */ }
 
     .text-center1,
     .text-center2 {
         margin: 0;
         width: 100%;
         
+        
+    }
+    .brand-picture{
+        height:auto;
+        width: 300px;
+        text-align: center;
     }
 
     .hide-on-mobile { 
         display: none; /* Hide the text on screens smaller than 768px */
      }
 
-    .fw-bold {
+    h2.fw-bold {
         font-size: 30px; /* Adjust font size for small screens */
+        text-align: center;
     }
    
     .carousel-item .container .row .col-md-6 { display: block; /* Ensure columns are displayed */ } .carousel-item .container .row .col-md-6 + .col-md-6 { display: none; /* Hide the second image column on small screens */ }
@@ -210,6 +223,8 @@ footer {
         flex-direction: column;
         max-width: none;
         text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .mt-3{
         text-align: center;
